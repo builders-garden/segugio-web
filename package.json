@@ -1,0 +1,59 @@
+{
+  "name": "segugio",
+  "version": "0.1.8",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "dev:monorepo": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@biconomy/account": "^4.5.7",
+    "@lens-protocol/client": "^2.0.0",
+    "@privy-io/react-auth": "^1.94.0",
+    "@privy-io/wagmi": "^0.2.12",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@t3-oss/env-core": "^0.11.1",
+    "@t3-oss/env-nextjs": "^0.11.1",
+    "@vercel/kv": "^1.0.1",
+    "@xmtp/frames-validator": "^0.6.1",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "frames.js": "^0.19.4",
+    "lucide-react": "^0.460.0",
+    "next": "^14.1.4",
+    "next-themes": "^0.4.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "shadcn": "^2.1.6",
+    "sonner": "^1.7.0",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss-animate": "^1.0.7",
+    "uuid": "^10.0.0",
+    "viem": "^2.21.45",
+    "wagmi": "^2.12.32",
+    "zod": "^3.23.8"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "devDependencies": {
+    "@frames.js/debugger": "^0.3.16",
+    "@types/node": "^18.17.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@types/uuid": "^10.0.0",
+    "autoprefixer": "^10.0.1",
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.4.5",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.1.0",
+    "is-port-reachable": "^4.0.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5.4.5"
+  }
+}
