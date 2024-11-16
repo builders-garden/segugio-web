@@ -5,20 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "dev:monorepo": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@biconomy/account": "^4.5.7",
+    "@coinbase/onchainkit": "^0.35.5",
     "@lens-protocol/client": "^2.0.0",
-    "@privy-io/react-auth": "^1.94.0",
-    "@privy-io/wagmi": "^0.2.12",
     "@radix-ui/react-slot": "^1.1.0",
     "@t3-oss/env-core": "^0.11.1",
     "@t3-oss/env-nextjs": "^0.11.1",
-    "@vercel/kv": "^1.0.1",
     "@xmtp/frames-validator": "^0.6.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",

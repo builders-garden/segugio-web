@@ -4,10 +4,12 @@ import { Toaster } from "@/components/ui/sonner";
 import { env } from "./env";
 
 // web3
+import { OnchainKitProvider } from "@coinbase/onchainkit";
+import { base } from "viem/chains";
+/*
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { PrivyClientConfig, PrivyProvider } from "@privy-io/react-auth";
 import { WagmiProvider, createConfig } from "@privy-io/wagmi";
-import { mainnet, base } from "viem/chains";
 import { http } from "wagmi";
 
 declare module "wagmi" {
@@ -35,10 +37,12 @@ const privyConfig: PrivyClientConfig = {
 };
 
 const queryClient = new QueryClient();
+*/
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   return (
     <>
+      {/*
       <PrivyProvider
         appId={env.NEXT_PUBLIC_PRIVY_APP_ID}
         config={{
@@ -48,13 +52,18 @@ export default function Providers({ children }: { children: React.ReactNode }) {
         }}
       >
         <QueryClientProvider client={queryClient}>
-          <WagmiProvider config={wagmiConfig}>
-            {/* <RainbowKitProvider> */}
-            {children}
-            {/* </RainbowKitProvider> */}
+          <WagmiProvider config={wagmiConfig}>*/}
+      <OnchainKitProvider
+        apiKey={env.NEXT_PUBLIC_ONCHAINKIT_API_KEY}
+        projectId={env.NEXT_PUBLIC_CDP_PROJECT_ID}
+        chain={base}
+      >
+        {children}
+      </OnchainKitProvider>
+      {/*
           </WagmiProvider>
         </QueryClientProvider>
-      </PrivyProvider>
+      </PrivyProvider>*/}
       <Toaster />
     </>
   );
